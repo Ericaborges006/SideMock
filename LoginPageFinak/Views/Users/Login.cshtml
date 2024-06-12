@@ -1,0 +1,103 @@
+﻿@model LoginPageFinak.Models.User
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    
+    
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #e1f4f8;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 { color: #3366d6; margin-top: 50px;}
+
+        form {
+            background-color: #fff;
+            border: 2px solid #3366d6;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input {
+            display: block;
+            margin: 10px auto;
+            text-align: left;
+            width: 80%;
+        }
+
+            input[type="text"], input[type="password"] {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #3366d6;
+                width: 95%;
+                box-sizing: border-box;
+            }
+
+            input[type="submit"] {
+                background-color: #3366d6;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                width: 100%;
+                box-sizing: border-box;
+                margin-top: 20px;
+            }
+
+                input[type="submit"]:hover { background-color: #2653a4; }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+
+
+    
+    <script>
+        function validateForm() {
+            var username = document.getElementsByName('username')[0].value;
+            var password = document.getElementsByName('password')[0].value;
+
+            if (username === 'al68627' && password === '00AI00SG00') {
+                alert('Login successful');
+            } else {
+                //alert('Invalid username or password');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form onsubmit="event.preventDefault(); validateForm();">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
